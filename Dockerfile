@@ -17,9 +17,9 @@ RUN  \
     openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -keyout config/myKey.pem -out config/myCrt.pem -subj "/C=ES/ST=BCN/L=BCN/O=myapp.api/CN=myapp.api.com"
 
 RUN \
-    python migrate.py db init &&\
-    python migrate.py db migrate &&\
-    python migrate.py db upgrade
+    python manage.py db init &&\
+    python manage.py db migrate &&\
+    python manage.py db upgrade
 
 ENV PYTHONPATH "${PYTHONPATH}:/usr/src/app/src"
 
