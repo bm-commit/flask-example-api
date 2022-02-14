@@ -1,7 +1,5 @@
 ### Simple Flask API
 
-Interview process challenge with Python. 
-
 - Allow to Login and register users.
 - Get current balance for user.
 - Transactions between two users.
